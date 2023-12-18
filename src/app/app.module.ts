@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { FooterBarComponent } from './shared/footer-bar/footer-bar.component';
 import { LoginComponent } from './login/login.component';
+import { LoginModule } from './login/login.module';
+import { NavBarModule } from './shared/nav-bar/nav-bar.module';
+import { FooterBarModule } from './shared/footer-bar/footer-bar.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    FooterBarComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoginModule,
+    NavBarModule,
+    FooterBarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
