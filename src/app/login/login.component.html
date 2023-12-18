@@ -4,16 +4,18 @@
         <div class="image">
             <img src="../../assets/images/Group 4.svg" alt="">
         </div>
-        <div class="inputs-form">
-            <div class="input-item-form">
-                <p class="text-info">Usuário:</p>
-                <input type="text" class="box-info">
+        <form class="form" [formGroup]="form">
+            <div class="inputs-form">
+                <div class="input-item-form">
+                    <p class="text-info">Usuário:</p>
+                    <input formControlName="user" type="text" class="box-info">
+                </div>
+                <div class="input-item-form">
+                    <p class="text-info">Senha:</p>
+                    <input formControlName="password" type="password" class="box-info">
+                </div>
             </div>
-            <div class="input-item-form">
-                <p class="text-info">Senha:</p>
-            <input type="password" class="box-info">
-            </div>
-        </div>
+        </form>
         <div class="buttons">
             <div class="button-login">
                 <button class="login">LOGIN</button>
