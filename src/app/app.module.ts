@@ -10,6 +10,8 @@ import { LoginModule } from './login/login.module';
 import { NavBarModule } from './shared/nav-bar/nav-bar.module';
 import { FooterBarModule } from './shared/footer-bar/footer-bar.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { RegisterModule } from './register/register.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavBarModule,
     FooterBarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RegisterModule
   ],
   providers: [
     provideClientHydration()
