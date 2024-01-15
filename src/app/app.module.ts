@@ -12,6 +12,7 @@ import { FooterBarModule } from './shared/footer-bar/footer-bar.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { RegisterModule } from './register/register.module';
+import { HttpClient, HttpClientModule, HttpHandler, provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,10 +26,11 @@ import { RegisterModule } from './register/register.module';
     FooterBarModule,
     FormsModule,
     ReactiveFormsModule,
-    RegisterModule
+    RegisterModule,
+    HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
   ],
   bootstrap: [AppComponent]
 })

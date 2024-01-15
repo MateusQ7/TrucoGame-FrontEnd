@@ -5,7 +5,7 @@
             <div class="inputs-form" [formGroup] ="form">
                 <div class="input-item-form">
                     <p class="text-info">Nome de Usuário:</p>
-                    <input formControlName="user" type="text" class="box-info">
+                    <input formControlName="name" type="text" class="box-info">
                 </div>
                 <div class="input-item-form">
                     <p class="text-info">Senha:</p>
@@ -23,7 +23,7 @@
         </form>
         <div class="buttons">
             <div class="button-register-div">
-                <button class="register-button">CRIAR CONTA</button>
+                <button class="register-button" (click)="submit()" routerLink="/login">CRIAR CONTA</button>
             </div>
         </div>
     </div>
