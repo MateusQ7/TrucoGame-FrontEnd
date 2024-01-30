@@ -4,6 +4,7 @@ import { FormatedForm } from '../models/formatedForm';
 import { RegisterService } from './register.service';
 import { BackReponse } from './backResponse.interface';
 import { Router } from '@angular/router';
+import { error } from 'node:console';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -52,31 +53,29 @@ export class RegisterComponent implements OnInit {
   } 
 
   async submit () {
+    const formatedForm: FormatedForm = {
+      name: this.form.value.name,
+      password: this.form.value.password,
+      email: this.form.value.email
+    };
     if(this.form.valid){
-      const formatedForm: FormatedForm = {
-        name: this.form.value.name,
-        password: this.form.value.password,
-        email: this.form.value.email
-      };
       this.registerService.submit(formatedForm).subscribe(
         (res) => {
+          console.log(res)
           const backReponse: BackReponse = {
             status: res.status,
             message: res.message,
             data: res.data
           }
-          console.log("Deu certo!", backReponse)
         },
         (error) => {
           const backReponse: BackReponse = {
             status: error.status,
             message: error.error.message
           }
-          console.log("Deu a porra!", backReponse)
         }
       )
     }
-    console.log("É");
     return;
   }
 
