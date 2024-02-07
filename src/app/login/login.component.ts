@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormatedForm } from '../models/formatedForm';
 
 @Component({
   selector: 'app-login',
@@ -31,5 +32,28 @@ export class LoginComponent implements OnInit{
 
     })
   }
+
+  // async login () {
+    
+  //   if(this.form.valid){
+  //     this.registerService.submit(formatedForm).subscribe(
+  //       (res) => {
+  //         console.log(res)
+  //         const backReponse: BackReponse = {
+  //           status: res.status,
+  //           message: res.message,
+  //           data: res.data
+  //         }
+  //       },
+  //       (error) => {
+  //         const backReponse: BackReponse = {
+  //           status: error.status,
+  //           message: error.error.message
+  //         }
+  //       }
+  //     )
+  //   }
+  //   return;
+  // }
 
 }
