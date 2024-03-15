@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { RegisterModule } from './register/register.module';
 import { HttpClient, HttpClientModule, HttpHandler, provideHttpClient } from '@angular/common/http';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClient, HttpClientModule, HttpHandler, provideHttpClient } from '@a
     AppRoutingModule,
     LoginModule,
     NavBarModule,
+    HomeModule,
     FooterBarModule,
     FormsModule,
     ReactiveFormsModule,
